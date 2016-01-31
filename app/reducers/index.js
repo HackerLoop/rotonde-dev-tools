@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux';
-import counter from './counter';
+let { combineReducers } = require('redux-immutable');
+import rotonde from './rotonde';
 
 const rootReducer = combineReducers({
-  counter
+  rotonde
 });
 
 export default rootReducer;

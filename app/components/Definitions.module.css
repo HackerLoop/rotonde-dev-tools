@@ -1,0 +1,23 @@
+.container {
+  padding-top: 1px;
+  color: #555555;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.listContainer {
+  height: 100%;
+  width: 50%;
+  float: left;
+  padding-bottom: 56px; /* size of a h3 :/ */
+}
+
+.tableContainer {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.tableContainer table tr {
+  cursor: pointer;
+}

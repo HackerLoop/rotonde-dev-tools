@@ -1,3 +1,5 @@
+import Immutable from 'immutable';
+
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
@@ -6,7 +8,7 @@ import routes from './routes';
 import configureStore from './store/configureStore';
 import './app.css';
 
-const store = configureStore();
+const store = configureStore(Immutable.fromJS({}));
 
 render(
   <Provider store={store}>

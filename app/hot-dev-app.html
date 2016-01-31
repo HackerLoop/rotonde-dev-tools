@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<meta charset="utf-8">
+    <meta charset="utf-8">
     <title>Hello Electron React!</title>
-    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../dist/style.css" />
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-theme.min.css" />
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      window.$ = window.jQuery = require('jquery/dist/jquery.min');
+    </script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="http://localhost:3000/dist/bundle.js"></script>
   </body>
 </html>
