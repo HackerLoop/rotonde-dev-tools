@@ -21,3 +21,8 @@
 .tableContainer table tr {
   cursor: pointer;
 }
+
+.tableContainer button {
+  float: right;
+  margin: 0px 5px;
+}

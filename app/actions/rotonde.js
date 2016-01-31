@@ -44,6 +44,17 @@ const actionSent = (action) => {
   };
 }
 
+export function subscribeEvent() {
+
+}
+
+export function sendAction(action) {
+  if (!client) {
+    throw "Client not created.";
+  }
+  client.sendAction(action);
+}
+
 export function connect(url) {
   return dispatch => {
     if (client) {
@@ -54,10 +65,10 @@ export function connect(url) {
       dispatch(connected());
     });
     client.definitionHandlers.attach('*', (definition) => {
-      dispatch(definitionAdded(definition));
+      dispatch(definitionAdded(Immutable.fromJS(definition)));
     });
     client.unDefinitionHandlers.attach('*', (definition) => {
-      dispatch(definitionRemoved(definition));
+      dispatch(definitionRemoved(Immutable.fromJS(definition)));
     });
     dispatch(connecting());
     client.connect();

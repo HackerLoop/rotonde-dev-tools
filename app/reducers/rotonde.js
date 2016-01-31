@@ -15,7 +15,7 @@ module.exports = {
   CONNECTING: (domain) => domain.set('connecting', true),
   CONNECTED: (domain) => domain.set('connected', true).set('connecting', false),
 
-  DEFINITION_ADDED: (domain, action) => domain.updateIn(['definitions', action.payload.type], (definitions) => definitions.push(action.payload).sort((a, b) => a.identifier.localeCompare(b.identifier))),
-  DEFINITION_REMOVED: (domain, action) => domain.updateIn(['definitions', action.payload.type], (definitions) => definitions.filter(definition => definition.identifier == action.payload.identifier)),
+  DEFINITION_ADDED: (domain, action) => domain.updateIn(['definitions', action.payload.get('type')], (definitions) => definitions.push(action.payload).sort((a, b) => a.get('identifier').localeCompare(b.get('identifier')))),
+  DEFINITION_REMOVED: (domain, action) => domain.updateIn(['definitions', action.payload.get('type')], (definitions) => definitions.filter(definition => definition.get('identifier') != action.payload.identifier)),
 };
 

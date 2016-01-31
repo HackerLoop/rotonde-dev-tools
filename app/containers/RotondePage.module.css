@@ -1,4 +1,18 @@
-.definitions {
-  width: 600px;
+.container {
+  width: 100%;
   height: 100%;
+}
+
+.showDefinitionsButton {
+  display: block;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.dashboard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
 }
