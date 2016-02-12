@@ -23,7 +23,7 @@ class Home extends Component {
     }
     return (
       <div className={styles.container}>
-        <form>
+        <form onSubmit={(e) => this._handleConnect(e)}>
           <Input  ref='connectInput'
                   className={styles.input}
                   type='text'
@@ -36,6 +36,7 @@ class Home extends Component {
   }
 
   _handleConnect(e) {
+    e.preventDefault();
     this.props.dispatch(actions.connect(this.refs.connectInput.getValue()));
   }
 }
